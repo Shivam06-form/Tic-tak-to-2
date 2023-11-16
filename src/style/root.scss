@@ -1,0 +1,83 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to left, rgba(241, 102, 102, 0.521), rgba(246, 246, 86, 0.772));
+}
+
+
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+.app {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h2 {
+    color: rgb(10, 108, 108);
+}
+
+
+.winningRow {
+    animation: mymove 2s infinite ease-in-out;
+}
+
+
+@keyframes mymove {
+    from {
+        color: red;
+        font-weight: 400;
+    }
+
+    to {
+        color: orange;
+        font-weight: 800;
+    }
+}
+
+
+.button {
+    color: green;
+    margin-bottom: 3%;
+
+}
+
+.board {
+    .board-row {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid #000;
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .square {
+            width: 80px;
+            height: 80px;
+            border-right: 2px solid #000;
+            font-size: 2.5rem;
+            padding: 0;
+            color: black;
+            overflow: hidden;
+            transition: all 0.2s;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}
